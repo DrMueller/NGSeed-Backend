@@ -21,14 +21,14 @@ namespace Mmu.Ngs.WebApi.Areas.AzureAd.Web.Controllers
             const string UserName = "m.mueller@novacapta.com";
             const string UserPassword = "Joker1joker1";
             const string Instance = "https://login.microsoftonline.com/";
-            var Authority = $"{Instance}{TenantId}";
+            var authority = $"{Instance}{TenantId}";
 
             var client = new HttpClient();
             var body = $"resource={RequestedResourceUrl}&client_id={ThisClientId}&grant_type=password&username={UserName}&password={UserPassword}&scope=openid&client_secret={ClientSecret}";
 
             var stringContent = new StringContent(body, Encoding.UTF8, "application/x-www-form-urlencoded");
 
-            var endpointUri = new Uri($"{Authority}/oauth2/token");
+            var endpointUri = new Uri($"{authority}/oauth2/token");
             var response = await client.PostAsync(endpointUri, stringContent);
             var responseString = await response.Content.ReadAsStringAsync();
 
