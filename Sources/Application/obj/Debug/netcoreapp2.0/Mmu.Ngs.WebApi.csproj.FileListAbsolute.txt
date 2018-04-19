@@ -10,3 +10,15 @@ C:\MyGit\Personal\ng-seed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\Mm
 C:\MyGit\Personal\ng-seed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.pdb
 C:\MyGit\Personal\ng-seed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\MyGit\Personal\ng-seed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.csprojResolveAssemblyReference.cache
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\bin\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.deps.json
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\bin\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.runtimeconfig.json
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\bin\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.runtimeconfig.dev.json
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\bin\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.dll
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\bin\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.pdb
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.csproj.CoreCompileInputs.cache
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.AssemblyInfoInputs.cache
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.AssemblyInfo.cs
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.dll
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.pdb
+C:\MyGit\Personal\NGSeed\Backend\Sources\Application\obj\Debug\netcoreapp2.0\Mmu.Ngs.WebApi.csprojResolveAssemblyReference.cache

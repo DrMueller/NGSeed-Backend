@@ -2,7 +2,7 @@
 
 namespace Mmu.Ngs.WebApi.Infrastructure.Security.Initialization.Services
 {
-    public interface ISecurityInitializationService
+    public interface ISecurityServiceInitializationService
     {
         void InitializeSecurity(IServiceCollection services);
     }

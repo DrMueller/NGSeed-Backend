@@ -57,7 +57,7 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Initialization
         private static void InitializeSecurity(IServiceCollection services)
         {
             var servicesProvider = CreateServiceProvider(services);
-            var securityInitializationService = servicesProvider.GetService<ISecurityInitializationService>();
+            var securityInitializationService = servicesProvider.GetService<ISecurityServiceInitializationService>();
 
             securityInitializationService.InitializeSecurity(services);
         }
