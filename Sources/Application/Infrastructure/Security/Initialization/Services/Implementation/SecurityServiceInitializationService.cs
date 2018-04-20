@@ -17,7 +17,7 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Security.Initialization.Services.Impleme
 
         public void InitializeSecurity(IServiceCollection services)
         {
-            var appSettings = _appSettingsProvider.GetAppSettings();
+            var appSettings = _appSettingsProvider.ProvideAppSettings();
             if (!appSettings.ActivateSecurity)
             {
                 InitializeNoOpSecurity(services);
@@ -50,7 +50,7 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Security.Initialization.Services.Impleme
                 });
         }
 
-        private  static void  InitializeNoOpSecurity(IServiceCollection services)
+        private static void InitializeNoOpSecurity(IServiceCollection services)
         {
             services.AddAuthentication(
                 options =>
@@ -59,10 +59,14 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Security.Initialization.Services.Impleme
                     options.DefaultAuthenticateScheme = NoOpAuthHandler.NoOpSchema;
                     options.DefaultChallengeScheme = NoOpAuthHandler.NoOpSchema;
                     options.DefaultSignInScheme = NoOpAuthHandler.NoOpSchema;
-                    options.DefaultSignOutScheme = NoOpAuthHandler.NoOpSchema; 
+                    options.DefaultSignOutScheme = NoOpAuthHandler.NoOpSchema;
                     options.DefaultForbidScheme = NoOpAuthHandler.NoOpSchema;
                 }
-            ).AddScheme<NoOpAuthOptions, NoOpAuthHandler>(NoOpAuthHandler.NoOpSchema, o => { });
+            ).AddScheme<NoOpAuthOptions, NoOpAuthHandler>(
+                NoOpAuthHandler.NoOpSchema,
+                o =>
+                {
+                });
         }
     }
 }

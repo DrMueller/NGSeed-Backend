@@ -1,4 +1,9 @@
-﻿using StructureMap;
+﻿using Microsoft.AspNetCore.Http;
+using Mmu.Mlh.DataAccess.Areas.DatabaseAccess.Services;
+using Mmu.Mlh.DataAccess.Areas.DataModeling.Services;
+using Mmu.Mlh.DomainExtensions.Areas.Repositories;
+using Mmu.Ngs.WebApi.Infrastructure.Settings.Services.Implementation;
+using StructureMap;
 
 namespace Mmu.Ngs.WebApi.Infrastructure.DependencyInjection
 {
@@ -10,8 +15,13 @@ namespace Mmu.Ngs.WebApi.Infrastructure.DependencyInjection
                 scanner =>
                 {
                     scanner.AssemblyContainingType<WebApiRegistry>();
+                    scanner.AddAllTypesOf(typeof(IRepository<>));
+                    scanner.AddAllTypesOf(typeof(IDataModelAdapter<,>));
                     scanner.WithDefaultConventions();
                 });
+
+            For<IHttpContextAccessor>().Use<HttpContextAccessor>().Singleton();
+            For<IDatabaseSettingsProvider>().Use<AppSettingsProvider>();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Mmu.Ngs.WebApi.Areas.Individuals.Dtos
+﻿namespace Mmu.Ngs.WebApi.Areas.Individuals.Application.Dtos
 {
     public class AddressDto
     {

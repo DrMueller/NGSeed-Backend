@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Mmu.Ngs.WebApi.Areas.Individuals.Dtos;
+using Mmu.Ngs.WebApi.Areas.Individuals.Application.Dtos;
 
-namespace Mmu.Ngs.WebApi.Areas.Individuals.Services
+namespace Mmu.Ngs.WebApi.Areas.Individuals.Application.AppServices
 {
-    public interface IIndividualService
+    public interface IIndividualAppService
     {
         Task<IndividualDto> CreateIndividualAsync(IndividualDto dto);
 

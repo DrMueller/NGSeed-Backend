@@ -1,4 +1,5 @@
-﻿using System.Text.Encodings.Web;
+﻿using System.Diagnostics;
+using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Logging;
@@ -15,5 +16,11 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Security.NoOpAuthentication
         }
 
         protected override Task<AuthenticateResult> HandleAuthenticateAsync() => Task.FromResult(AuthenticateResult.Success(new AuthenticationTicket(Context.User, NoOpSchema)));
+
+        protected override Task HandleForbiddenAsync(AuthenticationProperties properties)
+        {
+            Debug.WriteLine("Forbidden");
+            return base.HandleForbiddenAsync(properties);
+        }
     }
 }

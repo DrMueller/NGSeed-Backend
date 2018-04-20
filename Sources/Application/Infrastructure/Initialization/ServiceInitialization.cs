@@ -3,7 +3,6 @@ using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Mmu.Mlh.ApplicationExtensions.Areas.DependencyInjection;
-using Mmu.Ngs.WebApi.Areas.Individuals.Services;
 using Mmu.Ngs.WebApi.Infrastructure.Security.Initialization.Services;
 using Mmu.Ngs.WebApi.Infrastructure.Settings.Models;
 using StructureMap;
