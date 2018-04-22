@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Mmu.Ngs.WebApi.Areas.Individuals.Application.AppServices;
 using Mmu.Ngs.WebApi.Areas.Individuals.Application.Dtos;

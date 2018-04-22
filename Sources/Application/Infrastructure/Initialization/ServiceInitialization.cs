@@ -3,7 +3,8 @@ using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Mmu.Mlh.ApplicationExtensions.Areas.DependencyInjection;
-using Mmu.Ngs.WebApi.Infrastructure.Security.Initialization.Services;
+using Mmu.Ngs.WebApi.Infrastructure.Security.Authentication.Initialization;
+using Mmu.Ngs.WebApi.Infrastructure.Security.Authorization.Initialization;
 using Mmu.Ngs.WebApi.Infrastructure.Settings.Models;
 using StructureMap;
 
@@ -56,9 +57,11 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Initialization
         private static void InitializeSecurity(IServiceCollection services)
         {
             var servicesProvider = CreateServiceProvider(services);
-            var securityInitializationService = servicesProvider.GetService<ISecurityServiceInitializationService>();
+            var authenticationInitService = servicesProvider.GetService<IAuthenticationInitializationService>();
+            var authorizationInitService = servicesProvider.GetService<IAuthorizationInitializationService>();
 
-            securityInitializationService.InitializeSecurity(services);
+            authenticationInitService.Initialize(services);
+            authorizationInitService.InitializeAsync(services);
         }
     }
 }

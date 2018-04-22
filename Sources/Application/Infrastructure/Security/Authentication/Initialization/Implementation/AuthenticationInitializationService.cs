@@ -1,21 +1,21 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
-using Mmu.Ngs.WebApi.Infrastructure.Security.NoOpAuthentication;
+using Mmu.Ngs.WebApi.Infrastructure.Security.Authentication.NoOpAuthentication;
 using Mmu.Ngs.WebApi.Infrastructure.Settings.Models.SubSettings;
 using Mmu.Ngs.WebApi.Infrastructure.Settings.Services;
 
-namespace Mmu.Ngs.WebApi.Infrastructure.Security.Initialization.Services.Implementation
+namespace Mmu.Ngs.WebApi.Infrastructure.Security.Authentication.Initialization.Implementation
 {
-    public class SecurityServiceInitializationService : ISecurityServiceInitializationService
+    public class AuthenticationInitializationService : IAuthenticationInitializationService
     {
         private readonly IAppSettingsProvider _appSettingsProvider;
 
-        public SecurityServiceInitializationService(IAppSettingsProvider appSettingsProvider)
+        public AuthenticationInitializationService(IAppSettingsProvider appSettingsProvider)
         {
             _appSettingsProvider = appSettingsProvider;
         }
 
-        public void InitializeSecurity(IServiceCollection services)
+        public void Initialize(IServiceCollection services)
         {
             var appSettings = _appSettingsProvider.ProvideAppSettings();
             if (!appSettings.ActivateSecurity)

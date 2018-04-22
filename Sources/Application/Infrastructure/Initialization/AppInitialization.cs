@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Mmu.Ngs.WebApi.Infrastructure.Middlewares;
-using Mmu.Ngs.WebApi.Infrastructure.Security.Initialization.Services;
 using NLog.Extensions.Logging;
 using NLog.Web;
 
