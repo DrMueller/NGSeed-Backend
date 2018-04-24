@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Mmu.Ngs.WebApi.Infrastructure.Security.Authorization.PolicyConfiguration

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mmu.Ngs.WebApi.Areas.AzureAd.Web.Controllers
@@ -10,23 +9,14 @@ namespace Mmu.Ngs.WebApi.Areas.AzureAd.Web.Controllers
     {
         [HttpGet("TestGivenName")]
         [Authorize("GivenNamePolicy")]
-        public IActionResult TestGivenName()
-        {
-            return Ok(new { Result = "OK" });
-        }
+        public IActionResult TestGivenName() => Ok(new { Result = "OK" });
 
         [HttpGet("TestNameMatthiasMueller")]
         [Authorize("NameMatthiasMuellerPolicy")]
-        public IActionResult TestNameMatthiasMueller()
-        {
-            return Ok(new { Result = "OK" });
-        }
+        public IActionResult TestNameMatthiasMueller() => Ok(new { Result = "OK" });
 
         [HttpGet("TestNeverFullFilled")]
         [Authorize("NeverFullfilledPolicy")]
-        public IActionResult TestNeverFullFilled()
-        {
-            return Ok(new { Result = "OK" });
-        }
+        public IActionResult TestNeverFullFilled() => Ok(new { Result = "OK" });
     }
 }

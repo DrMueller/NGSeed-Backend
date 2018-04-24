@@ -1,10 +1,5 @@
-﻿using System;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Primitives;
-using Microsoft.Graph;
 
 namespace Mmu.Ngs.WebApi.Areas.AzureAd.AppServices.Implementation
 {

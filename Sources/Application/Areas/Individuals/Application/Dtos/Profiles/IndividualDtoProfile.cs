@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq.Expressions;
-using AutoMapper;
+﻿using AutoMapper;
 using Mmu.Ngs.WebApi.Areas.Individuals.Domain.Models;
 
 namespace Mmu.Ngs.WebApi.Areas.Individuals.Application.Dtos.Profiles
