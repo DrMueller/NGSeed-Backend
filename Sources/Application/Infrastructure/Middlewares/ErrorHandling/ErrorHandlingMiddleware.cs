@@ -6,7 +6,7 @@ using Mmu.Mlh.ApplicationExtensions.Areas.Logging.Services;
 using Mmu.Mlh.ApplicationExtensions.Areas.ServiceProvisioning;
 using Newtonsoft.Json;
 
-namespace Mmu.Ngs.WebApi.Infrastructure.Middlewares
+namespace Mmu.Ngs.WebApi.Infrastructure.Middlewares.ErrorHandling
 {
     public class ErrorHandlingMiddleware
     {
@@ -60,7 +60,10 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Middlewares
             exception = UnwrapException(exception);
             LogException(exception);
 
-            await response.WriteAsync(JsonConvert.SerializeObject(new { error = new { message = exception.Message, name = exception.GetType().Name, stack = exception.StackTrace } })).ConfigureAwait(false);
+            var serverError = ServerError.CreateFromException(exception);
+            var serializedServerError = JsonConvert.SerializeObject(serverError);
+
+            await response.WriteAsync(serializedServerError);
         }
     }
 }

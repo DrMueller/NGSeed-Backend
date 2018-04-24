@@ -2,7 +2,7 @@
 using Mmu.Mlh.DataAccess.Areas.DataModeling.Models;
 using Mmu.Ngs.WebApi.Areas.Individuals.Domain.Models;
 
-namespace Mmu.Ngs.WebApi.Areas.Individuals.DataAccess.Repositories.DataModels
+namespace Mmu.Ngs.WebApi.Areas.Individuals.DataAccess.DataModels
 {
     public class IndividualDataModel : DataModelBase
     {

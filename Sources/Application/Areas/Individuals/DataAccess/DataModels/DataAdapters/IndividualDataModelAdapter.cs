@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
 using Mmu.Mlh.DataAccess.Areas.DataModeling.Services;
-using Mmu.Ngs.WebApi.Areas.Individuals.DataAccess.Repositories.DataModels;
 using Mmu.Ngs.WebApi.Areas.Individuals.Domain.Factories;
 using Mmu.Ngs.WebApi.Areas.Individuals.Domain.Models;
 
-namespace Mmu.Ngs.WebApi.Areas.Individuals.DataAccess.DataAdapters
+namespace Mmu.Ngs.WebApi.Areas.Individuals.DataAccess.DataModels.DataAdapters
 {
     public class IndividualDataModelAdapter : IDataModelAdapter<IndividualDataModel, Individual>
     {

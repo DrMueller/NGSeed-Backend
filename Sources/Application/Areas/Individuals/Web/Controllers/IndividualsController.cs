@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Mmu.Ngs.WebApi.Areas.Individuals.Application.AppServices;
@@ -23,6 +24,9 @@ namespace Mmu.Ngs.WebApi.Areas.Individuals.Web.Controllers
             var result = await _individualService.CreateIndividualAsync(dto);
             return Ok(result);
         }
+
+        [HttpGet("Error")]
+        public virtual IActionResult ForceException() => throw new ArgumentException("Hello from the Individuals Controller!");
 
         [HttpGet]
         public async Task<IActionResult> GetAllIndividuals()
