@@ -26,7 +26,7 @@ namespace Mmu.Ngs.WebApi.Areas.Individuals.Web.Controllers
         }
 
         [HttpGet("Error")]
-        public virtual IActionResult ForceException() => throw new ArgumentException("Hello from the Individuals Controller!");
+        public virtual IActionResult ForceException() => throw new ArgumentException("Hello from the Individueals Controller!");
 
         [HttpGet]
         public async Task<IActionResult> GetAllIndividuals()
@@ -34,5 +34,9 @@ namespace Mmu.Ngs.WebApi.Areas.Individuals.Web.Controllers
             var result = await _individualService.LoadAllIndividualsAsync();
             return Ok(result);
         }
+
+        [AllowAnonymous]
+        [HttpGet("HelloWorld")]
+        public virtual IActionResult GetHelloWorld() => Ok("Hello World");
     }
 }
