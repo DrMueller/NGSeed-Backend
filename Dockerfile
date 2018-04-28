@@ -1,8 +1,6 @@
 FROM microsoft/aspnetcore-build:latest AS build-env
 WORKDIR /app
 
-# Copy csproj and restore as distinct layers
-# COPY ./**/*.csproj ./
 COPY . ./
 RUN dotnet restore
 
