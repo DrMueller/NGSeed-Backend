@@ -17,8 +17,8 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Middlewares.ErrorHandling
         }
 
         public string Message { get; }
-        public string TypeName { get; }
         public string StackTrace { get; }
+        public string TypeName { get; }
 
         public static ServerError CreateFromException(Exception ex) => new ServerError(ex.Message, ex.GetType().Name, ex.StackTrace);
     }

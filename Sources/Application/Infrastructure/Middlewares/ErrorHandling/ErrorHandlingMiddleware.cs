@@ -31,7 +31,6 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Middlewares.ErrorHandling
 
         private static void LogException(Exception exception)
         {
-            // Seems like the Constructor here doesn't get invoked
             var loggingService = ProvisioningServiceSingleton.Instance.GetService<ILoggingService>();
             loggingService.LogException(exception);
         }
@@ -50,7 +49,6 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Middlewares.ErrorHandling
             }
         }
 
-        // Careful, these properties are expected form the client, do not change on only one side
         private static async Task WriteExceptionAsync(HttpContext context, Exception exception, HttpStatusCode code)
         {
             var response = context.Response;
