@@ -48,6 +48,7 @@ namespace Mmu.Ngs.WebApi.Infrastructure.Security.Authentication.Initialization.I
                     options.RequireHttpsMetadata = false;
                     options.SaveToken = true;
                 });
+
         }
 
         private static void InitializeNoOpSecurity(IServiceCollection services)

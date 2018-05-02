@@ -1,4 +1,5 @@
 FROM microsoft/aspnetcore:2.0
 WORKDIR /app
-COPY /publish /app
-ENTRYPOINT ["dotnet", "/app/Mmu.Ngs.WebApi.dll"]
+COPY /publish .
+EXPOSE 80
+ENTRYPOINT ["dotnet", "Mmu.Ngs.WebApi.dll"]
